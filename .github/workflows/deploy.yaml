@@ -38,6 +38,6 @@ jobs:
 
       - name: Aws Code Deploy
         run: aws deploy create-deployment --application-name githubaction
-        --deployment-config-name CodeDeployDefault.OneAtATime
-        --deployment-group-name democicdgroup
-        --s3-location bucket=demogithubactionbucket,bundleType=zip,key=appbucket/app.zip
+          --deployment-config-name CodeDeployDefault.OneAtATime
+          --deployment-group-name democicdgroup
+          --s3-location bucket=demogithubactionbucket,bundleType=zip,key=appbucket/app.zip
