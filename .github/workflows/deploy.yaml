@@ -40,4 +40,4 @@ jobs:
         run: aws deploy create-deployment --application-name githubaction
           --deployment-config-name CodeDeployDefault.OneAtATime
           --deployment-group-name democicdgroup
-          --s3-location bucket=demogithubactionbucket,bundleType=zip,key=appbucket/app.zip
+          --s3-location bucket=demogithubactionbucket,bundleType=zip,key=app.zip
