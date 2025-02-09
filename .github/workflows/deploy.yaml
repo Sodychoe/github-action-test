@@ -51,7 +51,7 @@ jobs:
           aws-region: ap-northeast-2
 
       - name: Upload to S3
-        run: aws s3 cp app.zip s3://demogithubactionbucket/appbucket/app.zip
+        run: aws s3 cp app.zip s3://demogithubactionbucket/app.zip
 
       - name: Aws Code Deploy
         run: aws deploy create-deployment --application-name githubaction
