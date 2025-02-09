@@ -8,12 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DB_URL: ${{ secrets.DB_URL }}
-      DB_USER: ${{ secrets.DB_USER }}
-      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-      DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
-
 
     services:
       mysql:
@@ -41,6 +35,11 @@ jobs:
 
       - name: Build with gradle
         run: ./gradlew clean build
+        env:
+          DB_URL: ${{ secrets.DB_URL }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
 
       - name: make zip
         run: zip -qq -r app.zip .
