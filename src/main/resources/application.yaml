@@ -20,7 +20,3 @@ spring:
   sql:
     init:
       mode: always
-
-googleai:
-  api:
-    key: ${GOOGLE_API_KEY}
